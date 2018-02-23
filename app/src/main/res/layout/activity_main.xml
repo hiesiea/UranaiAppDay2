@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--プロパティの箇所ではコメント禁止-->
+<!--xmlns:android="http://schemas.android.com/apk/res/android" -->
+<!--layout_width:幅-->
+<!--layout_height:高さ-->
+<!--orientation:方向(縦か横)-->
+<!--padding:空白(上下左右全てに空白)-->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/main_screen_padding">
+
+    <!--タイトル-->
+    <!--text:表示する文字列-->
+    <!--layout_gravity:文字の配置位置-->
+    <!--textSize:テキストのサイズ-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/main_text_view_title"
+        android:layout_gravity="center_horizontal"
+        android:textSize="@dimen/main_text_view_title_text_size"
+        />
+
+    <!--名前テキスト-->
+    <!--textAppearance:テキストのスタイル-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/main_text_view_name"
+        />
+
+    <!--名前入力欄-->
+    <!--inputType:入力形式-->
+    <!--ems:入力文字数-->
+    <!--id:識別子(プログラムから呼び出す際に必要)-->
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/main_edit_text_name"
+        />
+
+    <!--生年月日テキスト-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/main_text_view_birthday"
+        />
+
+    <!--年号選択スピナー-->
+    <!--entries:スピナーに設定する値(配列)-->
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/main_spinner_era"
+        android:entries="@array/main_spinner_eras"
+        />
+
+    <!--生年月日-->
+    <!--レイアウトの中にレイアウトを定義：入れ子(いれご)-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!--年入力欄-->
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="date"
+            android:ems="2"
+            android:id="@+id/main_edit_text_year"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/main_text_view_year"
+            />
+
+        <!--月入力欄-->
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="date"
+            android:ems="2"
+            android:id="@+id/main_edit_text_month"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/main_text_view_month"
+            />
+
+        <!--日入力欄-->
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="date"
+            android:ems="2"
+            android:id="@+id/main_edit_text_day"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/main_text_view_day"
+            />
+
+    </LinearLayout>
+    <!--↑LinearLayoutの終わり-->
+
+    <!--性別テキスト-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/main_text_view_gender"
+        />
+
+    <!--性別ラジオボタングループ-->
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/main_radio_group_gender">
+
+        <!--男性-->
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/main_radio_button_men"
+            android:id="@+id/main_radio_button_men"
+            android:checked="true"
+            />
+
+        <!--女性-->
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/main_radio_button_women"
+            android:id="@+id/main_radio_button_women"
+            />
+    </RadioGroup>
+
+    <!--占うボタン-->
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/main_button_submit"
+        android:id="@+id/main_button_submit"
+        />
+
+</LinearLayout>

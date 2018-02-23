@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">UranaiApp</string>
+
+    <!--TextViewに表示する文字列-->
+    <string name="main_text_view_title">占いアプリ</string>
+    <string name="main_text_view_name">名前</string>
+    <string name="main_text_view_birthday">生年月日</string>
+    <string name="main_text_view_year">年</string>
+    <string name="main_text_view_month">月</string>
+    <string name="main_text_view_day">日</string>
+    <string name="main_text_view_gender">性別</string>
+
+    <!--Buttonに表示する文字列-->
+    <string name="main_button_submit">占う</string>
+
+    <!--性別データ-->
+    <string name="main_radio_button_men">男性</string>
+    <string name="main_radio_button_women">女性</string>
+
+    <!--生年月日の年号データ-->
+    <string-array name="main_spinner_eras">
+        <item>明治</item>
+        <item>大正</item>
+        <item>昭和</item>
+        <item>平成</item>
+    </string-array>
+
+    <!--占い結果データ-->
+    <string-array name="result_text_view_results">
+        <item>いいことが起きるでしょう！</item>
+        <item>最悪の1日になるでしょう！</item>
+        <item>微妙な1日になるでしょう！</item>
+        <item>普通の1日になるでしょう！</item>
+        <item>大きな決断をするでしょう！</item>
+        <item>異性に告白されるでしょう！</item>
+        <item>落とし物をするでしょう！</item>
+        <item>忘れ物をするでしょう！</item>
+        <item>問題を解決できるでしょう！</item>
+        <item>リストラされるでしょう！</item>
+    </string-array>
+</resources>
